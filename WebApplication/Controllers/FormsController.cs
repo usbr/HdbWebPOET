@@ -16,5 +16,14 @@ namespace WebApplication.Controllers
         {
             return View();
         }
+
+        /// <summary>
+        /// Returns SeriesSelection View
+        /// </summary>
+        /// <returns></returns>
+        public ActionResult SeriesSelection()
+        {
+            return View();
+        }
     }
 }

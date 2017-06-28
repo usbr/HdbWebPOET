@@ -496,6 +496,7 @@
     <Content Include="Views\Widgets\Index.cshtml" />
     <Content Include="Views\Home\DashboardV1.cshtml" />
     <Content Include="Views\Home\DashboardV2.cshtml" />
+    <Content Include="Views\Forms\SeriesSelection.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

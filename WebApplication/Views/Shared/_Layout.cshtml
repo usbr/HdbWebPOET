@@ -138,7 +138,7 @@
                 <ul class="sidebar-menu">
                     <li class="header">Main Navigation</li>
                     <li id="left-sidebar-menu-SeriesSelection">
-                        <a href="@Url.Action("Advanced", "Forms")">
+                        <a href="@Url.Action("SeriesSelection", "Forms")">
                             <i class="fa fa-laptop"></i>
                             <span>Series Selection</span>
                         </a>
@@ -156,141 +156,149 @@
                         </a>
                     </li>
 
-                    <li class="header">Source Samples</li>
-                    <li id="left-sidebar-menu-dashboard" class="treeview">
-                        <a href="#">
-                            <i class="fa fa-dashboard"></i> <span>Dashboard</span> <i class="fa fa-angle-left pull-right"></i>
-                        </a>
-                        <ul class="treeview-menu">
-                            <li id="left-sidebar-menu-dashboard-dashboardV1"><a href="@Url.Action("DashboardV1", "Home")"><i class="fa fa-circle-o"></i> Dashboard v1</a></li>
-                            <li id="left-sidebar-menu-dashboard-dashboardV2"><a href="@Url.Action("DashboardV2", "Home")"><i class="fa fa-circle-o"></i> Dashboard v2</a></li>
-                        </ul>
-                    </li>
-                    <li id="left-sidebar-menu-widgets">
-                        <a href="@Url.Action("Index", "Widgets")">
-                            <i class="fa fa-th"></i> <span>Widgets</span>
-                            <small class="label pull-right bg-green">new</small>
-                        </a>
-                    </li>
-                    <li id="left-sidebar-menu-charts" class="treeview">
-                        <a href="#">
-                            <i class="fa fa-pie-chart"></i>
-                            <span>Charts</span>
-                            <i class="fa fa-angle-left pull-right"></i>
-                        </a>
-                        <ul class="treeview-menu">
-                            <li id="left-sidebar-menu-charts-chartjs"><a href="@Url.Action("ChartJs", "Charts")"><i class="fa fa-circle-o"></i> ChartJS</a></li>
-                            <li id="left-sidebar-menu-charts-morris"><a href="@Url.Action("Morris", "Charts")"><i class="fa fa-circle-o"></i> Morris</a></li>
-                            <li id="left-sidebar-menu-charts-flot"><a href="@Url.Action("Flot", "Charts")"><i class="fa fa-circle-o"></i> Flot</a></li>
-                            <li id="left-sidebar-menu-charts-inline"><a href="@Url.Action("Inline", "Charts")"><i class="fa fa-circle-o"></i> Inline charts</a></li>
-                        </ul>
-                    </li>
-                    <li id="left-sidebar-menu-elements" class="treeview">
-                        <a href="#">
-                            <i class="fa fa-laptop"></i>
-                            <span>UI Elements</span>
-                            <i class="fa fa-angle-left pull-right"></i>
-                        </a>
-                        <ul class="treeview-menu">
-                            <li id="left-sidebar-menu-elements-general"><a href="@Url.Action("General", "Elements")"><i class="fa fa-circle-o"></i> General</a></li>
-                            <li id="left-sidebar-menu-elements-icons"><a href="@Url.Action("Icons", "Elements")"><i class="fa fa-circle-o"></i> Icons</a></li>
-                            <li id="left-sidebar-menu-elements-buttons"><a href="@Url.Action("Buttons", "Elements")"><i class="fa fa-circle-o"></i> Buttons</a></li>
-                            <li id="left-sidebar-menu-elements-sliders"><a href="@Url.Action("Sliders", "Elements")"><i class="fa fa-circle-o"></i> Sliders</a></li>
-                            <li id="left-sidebar-menu-elements-timeline"><a href="@Url.Action("Timeline", "Elements")"><i class="fa fa-circle-o"></i> Timeline</a></li>
-                            <li id="left-sidebar-menu-elements-modals"><a href="@Url.Action("Modals", "Elements")"><i class="fa fa-circle-o"></i> Modals</a></li>
-                        </ul>
-                    </li>
-                    <li id="left-sidebar-menu-forms" class="treeview">
-                        <a href="#">
-                            <i class="fa fa-edit"></i> <span>Forms</span>
-                            <i class="fa fa-angle-left pull-right"></i>
-                        </a>
-                        <ul class="treeview-menu">
-                            <li id="left-sidebar-menu-forms-general"><a href="@Url.Action("General", "Forms")"><i class="fa fa-circle-o"></i> General Elements</a></li>
-                            <li id="left-sidebar-menu-forms-advanced"><a href="@Url.Action("Advanced", "Forms")"><i class="fa fa-circle-o"></i> Advanced Elements</a></li>
-                            <li id="left-sidebar-menu-forms-editors"><a href="@Url.Action("Editors", "Forms")"><i class="fa fa-circle-o"></i> Editors</a></li>
-                        </ul>
-                    </li>
-                    <li id="left-sidebar-menu-tables" class="treeview">
-                        <a href="#">
-                            <i class="fa fa-table"></i> <span>Tables</span>
-                            <i class="fa fa-angle-left pull-right"></i>
-                        </a>
-                        <ul class="treeview-menu">
-                            <li id="left-sidebar-menu-tables-simple"><a href="@Url.Action("Simple", "Tables")"><i class="fa fa-circle-o"></i> Simple tables</a></li>
-                            <li id="left-sidebar-menu-tables-data"><a href="@Url.Action("Data", "Tables")"><i class="fa fa-circle-o"></i> Data tables</a></li>
-                        </ul>
-                    </li>
-                    <li id="left-sidebar-menu-calendar">
-                        <a href="@Url.Action("Index", "Calendar")">
-                            <i class="fa fa-calendar"></i>
-                            <span>Calendar</span>
-                            <small class="label pull-right bg-red">3</small>
-                        </a>
-                    </li>
-                    <li id="left-sidebar-menu-mailbox" class="treeview">
-                        <a href="#">
-                            <i class="fa fa-envelope"></i> <span>Mailbox</span>
-                            <i class="fa fa-angle-left pull-right"></i>
-                        </a>
-                        <ul class="treeview-menu">
-                            <li id="left-sidebar-menu-mailbox-inbox"><a href="@Url.Action("Inbox", "Mailbox")">Inbox <span class="label label-primary pull-right">13</span></a></li>
-                            <li id="left-sidebar-menu-mailbox-compose"><a href="@Url.Action("Compose", "Mailbox")">Compose</a></li>
-                            <li id="left-sidebar-menu-mailbox-read"><a href="@Url.Action("Read", "Mailbox")">Read</a></li>
-                        </ul>
-                    </li>
-                    <li id="left-sidebar-menu-examples" class="treeview">
-                        <a href="#">
-                            <i class="fa fa-folder"></i> <span>Examples</span>
-                            <i class="fa fa-angle-left pull-right"></i>
-                        </a>
-                        <ul class="treeview-menu">
-                            <li id="left-sidebar-menu-examples-invoice"><a href="@Url.Action("Invoice", "Examples")"><i class="fa fa-circle-o"></i> Invoice</a></li>
-                            <li id="left-sidebar-menu-examples-profileex"><a href="@Url.Action("ProfileEx", "Examples")"><i class="fa fa-circle-o"></i> Profile</a></li>
-                            <li id="left-sidebar-menu-examples-login"><a href="@Url.Action("Login", "Examples")"><i class="fa fa-circle-o"></i> Login</a></li>
-                            <li id="left-sidebar-menu-examples-register"><a href="@Url.Action("Register", "Examples")"><i class="fa fa-circle-o"></i> Register</a></li>
-                            <li id="left-sidebar-menu-examples-lockscreen"><a href="@Url.Action("Lockscreen", "Examples")"><i class="fa fa-circle-o"></i> Lockscreen</a></li>
-                            <li id="left-sidebar-menu-examples-p404"><a href="@Url.Action("P404", "Examples")"><i class="fa fa-circle-o"></i> 404 Error</a></li>
-                            <li id="left-sidebar-menu-examples-p500"><a href="@Url.Action("P500", "Examples")"><i class="fa fa-circle-o"></i> 500 Error</a></li>
-                            <li id="left-sidebar-menu-examples-blank"><a href="@Url.Action("Blank", "Examples")"><i class="fa fa-circle-o"></i> Blank Page</a></li>
-                            <li id="left-sidebar-menu-examples-pace"><a href="@Url.Action("Pace", "Examples")"><i class="fa fa-circle-o"></i> Pace Page</a></li>
-                        </ul>
-                    </li>
+                    <li class="header">Source</li>
                     <li id="left-sidebar-menu-multilevel" class="treeview">
                         <a href="#">
-                            <i class="fa fa-share"></i> <span>Multilevel</span>
+                            <i class="fa fa-book"></i> <span>Examples</span>
                             <i class="fa fa-angle-left pull-right"></i>
                         </a>
                         <ul class="treeview-menu">
-                            <li><a href="#"><i class="fa fa-circle-o"></i> Level One</a></li>
-                            <li>
-                                <a href="#"><i class="fa fa-circle-o"></i> Level One <i class="fa fa-angle-left pull-right"></i></a>
+                            <li id="left-sidebar-menu-dashboard" class="treeview">
+                                <a href="#">
+                                    <i class="fa fa-dashboard"></i> <span>Dashboard</span> <i class="fa fa-angle-left pull-right"></i>
+                                </a>
                                 <ul class="treeview-menu">
-                                    <li><a href="#"><i class="fa fa-circle-o"></i> Level Two</a></li>
-                                    <li>
-                                        <a href="#"><i class="fa fa-circle-o"></i> Level Two <i class="fa fa-angle-left pull-right"></i></a>
-                                        <ul class="treeview-menu">
-                                            <li><a href="#"><i class="fa fa-circle-o"></i> Level Three</a></li>
-                                            <li><a href="#"><i class="fa fa-circle-o"></i> Level Three</a></li>
-                                        </ul>
-                                    </li>
+                                    <li id="left-sidebar-menu-dashboard-dashboardV1"><a href="@Url.Action("DashboardV1", "Home")"><i class="fa fa-circle-o"></i> Dashboard v1</a></li>
+                                    <li id="left-sidebar-menu-dashboard-dashboardV2"><a href="@Url.Action("DashboardV2", "Home")"><i class="fa fa-circle-o"></i> Dashboard v2</a></li>
                                 </ul>
                             </li>
-                            <li><a href="#"><i class="fa fa-circle-o"></i> Level One</a></li>
-                        </ul>
-                    </li>
-                    <li id="left-sidebar-menu-documentation">
-                        <a href="@Url.Action("Index", "Documentation")">
-                            <i class="fa fa-book"></i>
-                            <span>Layout Documentation</span>
-                        </a>
-                    </li>
-                    @*<li class="header">LABELS</li>
+                            <li id="left-sidebar-menu-widgets">
+                                <a href="@Url.Action("Index", "Widgets")">
+                                    <i class="fa fa-th"></i> <span>Widgets</span>
+                                    <small class="label pull-right bg-green">new</small>
+                                </a>
+                            </li>
+                            <li id="left-sidebar-menu-charts" class="treeview">
+                                <a href="#">
+                                    <i class="fa fa-pie-chart"></i>
+                                    <span>Charts</span>
+                                    <i class="fa fa-angle-left pull-right"></i>
+                                </a>
+                                <ul class="treeview-menu">
+                                    <li id="left-sidebar-menu-charts-chartjs"><a href="@Url.Action("ChartJs", "Charts")"><i class="fa fa-circle-o"></i> ChartJS</a></li>
+                                    <li id="left-sidebar-menu-charts-morris"><a href="@Url.Action("Morris", "Charts")"><i class="fa fa-circle-o"></i> Morris</a></li>
+                                    <li id="left-sidebar-menu-charts-flot"><a href="@Url.Action("Flot", "Charts")"><i class="fa fa-circle-o"></i> Flot</a></li>
+                                    <li id="left-sidebar-menu-charts-inline"><a href="@Url.Action("Inline", "Charts")"><i class="fa fa-circle-o"></i> Inline charts</a></li>
+                                </ul>
+                            </li>
+                            <li id="left-sidebar-menu-elements" class="treeview">
+                                <a href="#">
+                                    <i class="fa fa-laptop"></i>
+                                    <span>UI Elements</span>
+                                    <i class="fa fa-angle-left pull-right"></i>
+                                </a>
+                                <ul class="treeview-menu">
+                                    <li id="left-sidebar-menu-elements-general"><a href="@Url.Action("General", "Elements")"><i class="fa fa-circle-o"></i> General</a></li>
+                                    <li id="left-sidebar-menu-elements-icons"><a href="@Url.Action("Icons", "Elements")"><i class="fa fa-circle-o"></i> Icons</a></li>
+                                    <li id="left-sidebar-menu-elements-buttons"><a href="@Url.Action("Buttons", "Elements")"><i class="fa fa-circle-o"></i> Buttons</a></li>
+                                    <li id="left-sidebar-menu-elements-sliders"><a href="@Url.Action("Sliders", "Elements")"><i class="fa fa-circle-o"></i> Sliders</a></li>
+                                    <li id="left-sidebar-menu-elements-timeline"><a href="@Url.Action("Timeline", "Elements")"><i class="fa fa-circle-o"></i> Timeline</a></li>
+                                    <li id="left-sidebar-menu-elements-modals"><a href="@Url.Action("Modals", "Elements")"><i class="fa fa-circle-o"></i> Modals</a></li>
+                                </ul>
+                            </li>
+                            <li id="left-sidebar-menu-forms" class="treeview">
+                                <a href="#">
+                                    <i class="fa fa-edit"></i> <span>Forms</span>
+                                    <i class="fa fa-angle-left pull-right"></i>
+                                </a>
+                                <ul class="treeview-menu">
+                                    <li id="left-sidebar-menu-forms-general"><a href="@Url.Action("General", "Forms")"><i class="fa fa-circle-o"></i> General Elements</a></li>
+                                    <li id="left-sidebar-menu-forms-advanced"><a href="@Url.Action("Advanced", "Forms")"><i class="fa fa-circle-o"></i> Advanced Elements</a></li>
+                                    <li id="left-sidebar-menu-forms-editors"><a href="@Url.Action("Editors", "Forms")"><i class="fa fa-circle-o"></i> Editors</a></li>
+                                </ul>
+                            </li>
+                            <li id="left-sidebar-menu-tables" class="treeview">
+                                <a href="#">
+                                    <i class="fa fa-table"></i> <span>Tables</span>
+                                    <i class="fa fa-angle-left pull-right"></i>
+                                </a>
+                                <ul class="treeview-menu">
+                                    <li id="left-sidebar-menu-tables-simple"><a href="@Url.Action("Simple", "Tables")"><i class="fa fa-circle-o"></i> Simple tables</a></li>
+                                    <li id="left-sidebar-menu-tables-data"><a href="@Url.Action("Data", "Tables")"><i class="fa fa-circle-o"></i> Data tables</a></li>
+                                </ul>
+                            </li>
+                            <li id="left-sidebar-menu-calendar">
+                                <a href="@Url.Action("Index", "Calendar")">
+                                    <i class="fa fa-calendar"></i>
+                                    <span>Calendar</span>
+                                    <small class="label pull-right bg-red">3</small>
+                                </a>
+                            </li>
+                            <li id="left-sidebar-menu-mailbox" class="treeview">
+                                <a href="#">
+                                    <i class="fa fa-envelope"></i> <span>Mailbox</span>
+                                    <i class="fa fa-angle-left pull-right"></i>
+                                </a>
+                                <ul class="treeview-menu">
+                                    <li id="left-sidebar-menu-mailbox-inbox"><a href="@Url.Action("Inbox", "Mailbox")">Inbox <span class="label label-primary pull-right">13</span></a></li>
+                                    <li id="left-sidebar-menu-mailbox-compose"><a href="@Url.Action("Compose", "Mailbox")">Compose</a></li>
+                                    <li id="left-sidebar-menu-mailbox-read"><a href="@Url.Action("Read", "Mailbox")">Read</a></li>
+                                </ul>
+                            </li>
+                            <li id="left-sidebar-menu-examples" class="treeview">
+                                <a href="#">
+                                    <i class="fa fa-folder"></i> <span>Examples</span>
+                                    <i class="fa fa-angle-left pull-right"></i>
+                                </a>
+                                <ul class="treeview-menu">
+                                    <li id="left-sidebar-menu-examples-invoice"><a href="@Url.Action("Invoice", "Examples")"><i class="fa fa-circle-o"></i> Invoice</a></li>
+                                    <li id="left-sidebar-menu-examples-profileex"><a href="@Url.Action("ProfileEx", "Examples")"><i class="fa fa-circle-o"></i> Profile</a></li>
+                                    <li id="left-sidebar-menu-examples-login"><a href="@Url.Action("Login", "Examples")"><i class="fa fa-circle-o"></i> Login</a></li>
+                                    <li id="left-sidebar-menu-examples-register"><a href="@Url.Action("Register", "Examples")"><i class="fa fa-circle-o"></i> Register</a></li>
+                                    <li id="left-sidebar-menu-examples-lockscreen"><a href="@Url.Action("Lockscreen", "Examples")"><i class="fa fa-circle-o"></i> Lockscreen</a></li>
+                                    <li id="left-sidebar-menu-examples-p404"><a href="@Url.Action("P404", "Examples")"><i class="fa fa-circle-o"></i> 404 Error</a></li>
+                                    <li id="left-sidebar-menu-examples-p500"><a href="@Url.Action("P500", "Examples")"><i class="fa fa-circle-o"></i> 500 Error</a></li>
+                                    <li id="left-sidebar-menu-examples-blank"><a href="@Url.Action("Blank", "Examples")"><i class="fa fa-circle-o"></i> Blank Page</a></li>
+                                    <li id="left-sidebar-menu-examples-pace"><a href="@Url.Action("Pace", "Examples")"><i class="fa fa-circle-o"></i> Pace Page</a></li>
+                                </ul>
+                            </li>
+                            <li id="left-sidebar-menu-multilevel" class="treeview">
+                                <a href="#">
+                                    <i class="fa fa-share"></i> <span>Multilevel</span>
+                                    <i class="fa fa-angle-left pull-right"></i>
+                                </a>
+                                <ul class="treeview-menu">
+                                    <li><a href="#"><i class="fa fa-circle-o"></i> Level One</a></li>
+                                    <li>
+                                        <a href="#"><i class="fa fa-circle-o"></i> Level One <i class="fa fa-angle-left pull-right"></i></a>
+                                        <ul class="treeview-menu">
+                                            <li><a href="#"><i class="fa fa-circle-o"></i> Level Two</a></li>
+                                            <li>
+                                                <a href="#"><i class="fa fa-circle-o"></i> Level Two <i class="fa fa-angle-left pull-right"></i></a>
+                                                <ul class="treeview-menu">
+                                                    <li><a href="#"><i class="fa fa-circle-o"></i> Level Three</a></li>
+                                                    <li><a href="#"><i class="fa fa-circle-o"></i> Level Three</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#"><i class="fa fa-circle-o"></i> Level One</a></li>
+                                </ul>
+                            </li>
+                            <li id="left-sidebar-menu-documentation">
+                                <a href="@Url.Action("Index", "Documentation")">
+                                    <i class="fa fa-book"></i>
+                                    <span>Layout Documentation</span>
+                                </a>
+                            </li>
+                            @*<li class="header">LABELS</li>
                     <li><a href="#"><i class="fa fa-circle-o text-red"></i> <span>Important</span></a></li>
                     <li><a href="#"><i class="fa fa-circle-o text-yellow"></i> <span>Warning</span></a></li>
                     <li><a href="#"><i class="fa fa-circle-o text-aqua"></i> <span>Information</span></a></li>*@
+                        </ul>
+                    </li>
                 </ul>
-            </section>
+</section>
         </aside>
         <div class="content-wrapper">
             <section class="content-header">
@@ -315,13 +323,22 @@
         </footer>
         <aside class="control-sidebar control-sidebar-dark">
             <ul class="nav nav-tabs nav-justified control-sidebar-tabs">
-                <li><a href="#control-sidebar-home-tab" data-toggle="tab"><i class="fa fa-home"></i></a></li>
                 <li><a href="#control-sidebar-settings-tab" data-toggle="tab"><i class="fa fa-gears"></i></a></li>
+                <li><a href="#control-sidebar-home-tab" data-toggle="tab"><i class="fa fa-home"></i></a></li>
             </ul>
             <div class="tab-content">
                 <div class="tab-pane" id="control-sidebar-home-tab">
-                    <h3 class="control-sidebar-heading">Recent Activity</h3>
-                    <ul class="control-sidebar-menu">
+                    <h3 class="control-sidebar-heading">About HDB Web POET</h3>
+                    <p>
+                        This software application is currently being developed to modernize the Windows Forms HDB POET desktop application with the goal of
+                        eventually replacing it as a data management solution. HDB POET (Hydrologic Database - Web based Perusal Or Editing Tool ) is a desktop
+                        application used to view, query, edit, and manage data within a Reclamation Hydrologic Database (HDB).
+                    </p>
+                    <p>
+                        This application's visual pagesand layouts are based on the sample project code obtained via the Microsoft Developer Network for an 
+                        ASP.NET MVC Application with a Custom Layout. Work to mimic HDB POET graphical user interfaces, functionality, and as much of the source code is ongoing.
+                    </p>
+                    @*<ul class="control-sidebar-menu">
                         <li>
                             <a href="javascript::;">
                                 <i class="menu-icon fa fa-birthday-cake bg-red"></i>
@@ -405,13 +422,51 @@
                                 </div>
                             </a>
                         </li>
-                    </ul>
+                    </ul>*@
                 </div>
                 <div class="tab-pane" id="control-sidebar-stats-tab">Stats Tab Content</div>
                 <div class="tab-pane" id="control-sidebar-settings-tab">
                     <form method="post">
-                        <h3 class="control-sidebar-heading">General Settings</h3>
+                        <h3 class="control-sidebar-heading">Advanced Options</h3>
                         <div class="form-group">
+                            <label class="control-sidebar-subheading">
+                                Show empty SDIDs
+                                <input type="checkbox" class="pull-right">
+                            </label>
+                            <p>
+                                This will tell POET to also retrieve empty SDIDs for sites in the Series Selection interface
+                            </p>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-sidebar-subheading">
+                                Show Base
+                                <input type="checkbox" class="pull-right">
+                            </label>
+                            <p>
+                                This will tell POET to also retrive data in the BASE tables in the Series Selection interface
+                            </p>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-sidebar-subheading">
+                                R-Base Insert
+                                <input type="checkbox" class="pull-right">
+                            </label>
+                            <p>
+                                This allows historical changes to be archived in R-Base; Default write behavior is to update
+                            </p>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-sidebar-subheading">
+                                Overwrite Flag
+                                <input type="checkbox" class="pull-right">
+                            </label>
+                            <p>
+                                This allows POET to send an overwrite flag when writing to HDB; this will lock and overwrite locked data
+                            </p>
+                        </div>
+
+
+                        @*<div class="form-group">
                             <label class="control-sidebar-subheading">
                                 Report panel usage
                                 <input type="checkbox" class="pull-right" checked>
@@ -456,7 +511,8 @@
                                 Delete chat history
                                 <a href="javascript::;" class="text-red pull-right"><i class="fa fa-trash-o"></i></a>
                             </label>
-                        </div>
+                        </div>*@
+
                     </form>
                 </div>
             </div>
