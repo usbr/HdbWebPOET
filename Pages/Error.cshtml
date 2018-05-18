@@ -1,11 +1,22 @@
 ﻿@page
 @model ErrorModel
 @{
-    ViewData["Title"] = "Error";
+    ViewData["Title"] = "Oops...";
 }
 
-<h1 class="text-danger">Error.</h1>
-<h2 class="text-danger">An error occurred while processing your request.</h2>
+<h1 class="text-danger">Error</h1>
+<h2 class="text-danger">This cute kitty-cat apologizes for the error...</h2>
+
+<img src="~/images/oops.gif" class="img-responsive" alt="User Image">
+
+<br />
+<p>
+    <a href="mailto:jrocha@usbr.gov?Subject=HDB Web POET" target="_top">E-mail the developer</a>
+    and let them know what you were doing and that you encountered an error code
+    <b><span id="errCodeSpan" class="text-danger"></span></b> while you were doing it.
+    More information on error codes may be found
+    <a href="https://en.wikipedia.org/wiki/List_of_HTTP_status_codes" target="blank">here</a>
+</p>
 
 @if (Model.ShowRequestId)
 {
@@ -14,10 +25,10 @@
     </p>
 }
 
-<h3>Development Mode</h3>
-<p>
-    Swapping to <strong>Development</strong> environment will display more detailed information about the error that occurred.
-</p>
-<p>
-    <strong>Development environment should not be enabled in deployed applications</strong>, as it can result in sensitive information from exceptions being displayed to end users. For local debugging, development environment can be enabled by setting the <strong>ASPNETCORE_ENVIRONMENT</strong> environment variable to <strong>Development</strong>, and restarting the application.
-</p>
+<script>
+    var url = window.location.href;
+    var errCode = url.split("?")[1];
+    span = document.getElementById("errCodeSpan");
+    txt = document.createTextNode(errCode);
+    span.appendChild(txt);
+</script>

@@ -7,7 +7,6 @@
 <link rel="stylesheet" href="~/lib/AdminLTE/plugins/daterangepicker/css/daterangepicker-bs3.css" />
 <link rel="stylesheet" href="~/lib/AdminLTE/plugins/timepicker/css/bootstrap-timepicker.min.css" />
 <link rel="stylesheet" href="~/lib/AdminLTE/dist/css/admin-lte.min.css" />
-<link rel="stylesheet" href="~/lib/AdminLTE/dist/css/skins/skin-blue.css" />
 
 <script src="~/lib/jquery/dist/jquery.js"></script>
 <script src="~/lib/AdminLTE/plugins/daterangepicker/js/moment.js"></script>
@@ -43,11 +42,10 @@
                 <div class="form-group">
                     <label>Object Type</label>
                     <select multiple class="form-control">
-                        <option>option 1</option>
-                        <option>option 2</option>
-                        <option>option 3</option>
-                        <option>option 4</option>
-                        <option>option 5</option>
+                        <option>read</option>
+                        <option>this</option>
+                        <option>from</option>
+                        <option>hdb</option>
                     </select>
                     <div class="checkbox">
                         <label>
@@ -59,11 +57,10 @@
                 <div class="form-group">
                     <label>Basin</label>
                     <select class="form-control">
-                        <option>option 1</option>
-                        <option>option 2</option>
-                        <option>option 3</option>
-                        <option>option 4</option>
-                        <option>option 5</option>
+                        <option>read</option>
+                        <option>this</option>
+                        <option>from</option>
+                        <option>hdb</option>
                     </select>
                 </div>
             </div>
@@ -72,21 +69,22 @@
                 <div class="form-group">
                     <label>Time Series Interval</label>
                     <select multiple class="form-control">
-                        <option>option 1</option>
-                        <option>option 2</option>
-                        <option>option 3</option>
-                        <option>option 4</option>
-                        <option>option 5</option>
+                        <option value="IN">instant</option>
+                        <option value="HR">hour</option>
+                        <option value="DY" selected>day</option>
+                        <option value="MN">month</option>
+                        <option value="YR">year</option>
+                        <option value="WY">wy</option>
                     </select>
                 </div>
                 <div class="form-group">
                     <label>Increment (minutes)</label>
                     <select class="form-control">
-                        <option>option 1</option>
-                        <option>option 2</option>
-                        <option>option 3</option>
-                        <option>option 4</option>
-                        <option>option 5</option>
+                        <option value="1">1</option>
+                        <option value="5">5</option>
+                        <option value="15">15</option>
+                        <option value="30">30</option>
+                        <option value="60" selected>60</option>
                     </select>
                 </div>
                 <div class="form-group">
@@ -140,21 +138,19 @@
                     <div class="form-group">
                         <label>Select a Model ID and... </label>
                         <select class="form-control">
-                            <option>option 1</option>
-                            <option>option 2</option>
-                            <option>option 3</option>
-                            <option>option 4</option>
-                            <option>option 5</option>
+                            <option>read</option>
+                            <option>this</option>
+                            <option>from</option>
+                            <option>hdb</option>
                         </select>
                     </div>
                     <div class="form-group">
                         <label>Select a Model Run ID</label>
                         <select class="form-control">
-                            <option>option 1</option>
-                            <option>option 2</option>
-                            <option>option 3</option>
-                            <option>option 4</option>
-                            <option>option 5</option>
+                            <option>read</option>
+                            <option>this</option>
+                            <option>from</option>
+                            <option>hdb</option>
                         </select>
                     </div>
                 </div>
@@ -163,8 +159,7 @@
         </div>
     </div>
     <div class="box-footer">
-        Visit <a href="https://select2.github.io/">Select2 documentation</a> for more examples and information about
-        the plugin.
+        [JR] - PLACE HELPER MESSAGES HERE
     </div>
 </div>
 <div class="row">
