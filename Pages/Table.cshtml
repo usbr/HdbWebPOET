@@ -1,0 +1,129 @@
+﻿@page
+@model TableModel
+@{
+    ViewData["Title"] = "Data View";
+    ViewData["SubTitle"] = "Displays queried data";
+}
+
+@*<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>*@
+<script src="~/lib/jquery/dist/jquery.js"></script>
+<script src="~/lib/dygraphs/dygraphs.min.js"></script>
+<script src="~/scripts/_layout.js"></script>
+<script src="~/lib/AdminLTE/plugins/datatables/js/jquery.dataTables.min.js"></script>
+
+<link rel="stylesheet" href="~/lib/dygraphs/dygaphs.min.css">
+
+<style type="text/css">
+    #graphdiv {
+        position: absolute;
+        left: 10px;
+        right: 10px;
+        top: 25px;
+        bottom: 10px;
+    }
+</style>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $.ajax({
+            type: "GET",
+            //beforeSend: function (request) {
+            //    request.setRequestHeader("Authorization", "AUTH HEADER");
+            //    request.setRequestHeader("api_hdb", "HDB INSTANCE");
+            //    request.setRequestHeader("api_user", "HDB USER");
+            //    request.setRequestHeader("api_pass", "HDB PASS");
+            //},
+            url: "http://ibr3lcrsrv02.bor.doi.net/cgi?svr=lchdb2&sdi=1863&tstp=DY&t1=2018-04-17T00:00&t2=2018-05-17T00:00&table=R&mrid=0&format=json",
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success: function (data) {
+                //alert(JSON.stringify(data));
+                $("#DIV").html('');
+                var DIV = '';
+                $.each(data.Series[0].Data, function (i, item) {
+                    var rows = "<tr>    " +
+                        "<td id='t'>" + item.t + "</td>" +
+                        "<td id='v'>" + item.v + "</td>" +
+                        "</tr>";
+                    $('#Table').append(rows);
+                }); //End of foreach Loop
+                //console.log(data);
+            }, //End of AJAX Success function
+
+            failure: function (data) {
+                alert(data.responseText);
+            }, //End of AJAX failure function
+            error: function (data) {
+                alert(data.responseText);
+            } //End of AJAX error function
+
+        });
+    });
+    window.onload = function () {
+        g = new Dygraph(
+            document.getElementById("graphdiv"),
+            'http://ibr3lcrsrv02.bor.doi.net/cgi?svr=lchdb2&sdi=1863&tstp=DY&t1=2018-04-17T00:00&t2=2018-05-17T00:00&table=R&mrid=0&format=88',
+            {
+                fillGraph: true,
+                showRangeSelector: true,
+                legend: 'follow',
+                xlabel: 'Date',
+                ylabel: 'Value',
+                labelsSeparateLines: true,
+                axisLabelWidth: 75,
+                highlightCircleSize: 5,
+                pointSize: 1.5,
+                strokeWidth: 1.5
+            });
+    }
+</script>
+
+
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        Data Display
+    </div>   <!--en dof panel-heading -->
+    <div class="panel-body">
+        <div class="box box-solid">
+            <div class="box-header">
+                <i class="fa fa-bar-chart-o"></i>
+                <h3 class="box-title">Graph</h3>
+                <div class="box-tools pull-right">
+                    <button type="button" class="btn btn-default btn-sm" data-widget="collapse">
+                        <i class="fa fa-minus"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="box-body">
+                <div class="box box-solid" style="height: 500px; padding-top:5px;">
+                    <div class="box-header">
+                        <h3 class="box-title text-blue"></h3>
+                    </div>
+                    <div id="status" style="width:1000px; font-size:0.8em; padding-top:5px;"></div>
+                    <br>
+                    <div id="graphdiv" style="font-size:0.8em; padding-top:5px;">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="box box-solid">
+            <div class="box-header">
+                <i class="fa fa-table"></i>
+                <h3 class="box-title">Table</h3>
+                <div class="box-tools pull-right">
+                    <button type="button" class="btn btn-default btn-sm" data-widget="collapse">
+                        <i class="fa fa-minus"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="box-body">
+                <table class="table table-bordered table-striped" id="Table">
+                    <tr>
+                        <th>DateTime</th>
+                        <th>Value</th>
+                    </tr>   <!--end of table-row -->
+                </table>   <!--end of table -->
+            </div>
+        </div>
+    </div> <!--end of Panel-body -->
+</div> <!--end of Panel -->  
