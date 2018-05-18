@@ -1,12 +1,109 @@
 ﻿@page
 @model IndexModel
 @{
-    ViewData["Title"] = "HDB Web POET Home Page";
+    ViewData["Title"] = "Home";
     ViewData["SubTitle"] = "";
 }
 
-<div class="row">
-    <center><h1>HDB Web POET</h1></center>
-
+<div class="box box-primary">
+    <div class="box-header with-border">
+        <h3 class="box-title">HDB Web POET</h3>
+        <div class="box-tools pull-right">
+            @*<button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>*@
+            @*<button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-remove"></i></button>*@
+        </div>
+    </div>
+    <div class="box-body">
+        <div class="box-group" id="accordion">
+            <!-- we are adding the .panel class so bootstrap.js collapse plugin detects it -->
+            <div class="panel box box-primary">
+                <div class="box-header with-border">
+                    <h4 class="box-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                            General Information
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapseOne" class="panel-collapse collapse in">
+                    <div class="box-body">
+                        This software application is currently being developed to modernize the Windows Forms HDB POET desktop application
+                        with the goal of eventually replacing it as a data management solution. HDB Web POET is a web-based application used
+                        to view, query, edit, and manage data within a Reclamation Hydrologic Database (HDB).
+                        <br /><br />
+                        This application is being developed using ASP.NET Core with Visual Studio 2017. This application's visual pages,
+                        features, and layouts are based on the AdminLTE and Bootstrap frameworks. This application is also being developed
+                        using project code obtained via the Microsoft Developer Network for an ASP.NET MVC Application with a Custom Layout
+                        as a reference. Work to mimic HDB POET graphical user interfaces, functionality, and as much of the source code is ongoing.
+                    </div>
+                </div>
+            </div>
+            <div class="panel box box-danger">
+                <div class="box-header with-border">
+                    <h4 class="box-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+                            Contact Information
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapseTwo" class="panel-collapse collapse">
+                    <div class="box-body">
+                        Contact information for the developer of this application may be found below. Feel free to let him know how much this program
+                        sucks...
+                        <br /><br />
+                        <i class="fa fa-user-secret"></i> <span>Jon Rocha</span><br />
+                        <i class="fa fa-phone"></i> <span>(702) 293-8379</span><br />
+                        <i class="fa fa-mobile-phone"></i> <span>(208) 208-8355</span><br />
+                        <i class="fa fa-mail-reply"></i> <span><a href="mailto:jrocha@usbr.gov?Subject=HDB Web POET" target="_top">jrocha@usbr.gov</a></span><br />
+                    </div>
+                </div>
+            </div>
+            <div class="panel box box-success">
+                <div class="box-header with-border">
+                    <h4 class="box-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+                            License & Disclaimer
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapseThree" class="panel-collapse collapse">
+                    <div class="box-body">
+                        ﻿The MIT License (MIT)
+                        <br /><br />
+                        Permission is hereby granted, free of charge, to any person obtaining a copy
+                        of this software and associated documentation files (the "Software"), to deal
+                        in the Software without restriction, including without limitation the rights
+                        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+                        copies of the Software, and to permit persons to whom the Software is
+                        furnished to do so, subject to the following conditions:
+                        <br /><br />
+                        The above copyright notice and this permission notice shall be included in all
+                        copies or substantial portions of the Software.
+                        <br /><br />
+                        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+                        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+                        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+                        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+                        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+                        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+                        SOFTWARE.
+                        <br /><br />
+                        This aplication is not officially endorsed, developed, or published by USBR. This 
+                        application constitutes a work of the United States Government and is not subject 
+                        to domestic copyright protection under 17 USC ¤ 105. Subsequent contributions 
+                        by members of the public, however, retain their original copyright. This 
+                        application is provided "AS IS" without warranty of any kind, express or implied, 
+                        including but not limited to the warranties of merchantibility, fitness for a 
+                        particular purpose and noninfringement. In no event shall the authors of this 
+                        application be liable for any claim, damages or other liability, whether in an 
+                        action of contract, torto or otherwise, arising from, out of or in connection 
+                        with the application or the use or other dealings in the application.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
+<center>
+    <img src="~/images/usbrLogo.png" class="img-circle" alt="USBR Logo" style="width:25%;height:25%;">
+</center>
 

@@ -53,9 +53,9 @@ desired effect
         <header class="main-header">
 
             <!-- Logo -->
-            <a href="index2.html" class="logo">
+            <a href="/" class="logo">
                 <!-- mini logo for sidebar mini 50x50 pixels -->
-                <span class="logo-mini">POET</span>
+                <span class="logo-mini"><img src="~/favicon.ico" class="img-responsive" alt="POET Logo"></span>
                 <!-- logo for regular state and mobile devices -->
                 <span class="logo-lg"><b>HDB Web POET</b></span>
             </a>
@@ -252,10 +252,10 @@ desired effect
                 <!-- /.search form -->
                 <!-- Sidebar Menu -->
                 <ul class="sidebar-menu" data-widget="tree">
-                    <li class="header">Web POET Pages</li>
+                    <li class="header">Web POET Tabs</li>
                     <!-- Optionally, you can add icons to the links -->
                     <li><a href="/"><i class="fa fa-home"></i> <span>Home</span></a></li>
-                    <li><a href="/SeriesSelection"><i class="fa fa-laptop"></i> <span>Data Discovery</span></a></li>
+                    <li><a href="/SeriesSelection"><i class="fa fa-search"></i> <span>Data Discovery</span></a></li>
                     <li><a href="/Table"><i class="fa fa-table"></i> <span>Data View</span></a></li>
                     <li class="treeview">
                         <a href="#">
@@ -285,7 +285,7 @@ desired effect
                         <small>@ViewBag.SubTitle</small>
                     </h1>
                     <ol class="breadcrumb">
-                        <li><a href="/"><i class="fa fa-dashboard"></i> HDB Web POET</a></li>
+                        <li><a href="/"><i class="fa fa-home"></i> HDB Web POET</a></li>
                         <li class="active">@ViewBag.Title</li>
                     </ol>
                 </section>
@@ -322,16 +322,23 @@ desired effect
             <div class="tab-content">
                 <!-- Home tab content -->
                 <div class="tab-pane active" id="control-sidebar-home-tab">
-                    <h3 class="control-sidebar-heading">Recent Activity</h3>
+                    <h3 class="control-sidebar-heading">Messages</h3>
                     <ul class="control-sidebar-menu">
                         <li>
                             <a href="javascript:;">
-                                <i class="menu-icon fa fa-birthday-cake bg-red"></i>
-
+                                <i class="menu-icon fa fa-warning"></i>
                                 <div class="menu-info">
-                                    <h4 class="control-sidebar-subheading">Langdon's Birthday</h4>
-
-                                    <p>Will be 23 on April 24th</p>
+                                    <h4 class="control-sidebar-subheading">HDB API Outage</h4>
+                                    <p>Scheduled for 11NOV1980</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">
+                                <i class="menu-icon fa fa-beer"></i>
+                                <div class="menu-info">
+                                    <h4 class="control-sidebar-subheading">POET Tax Due</h4>
+                                    <p>You need to buy the developer a beer...</p>
                                 </div>
                             </a>
                         </li>
@@ -343,14 +350,14 @@ desired effect
                         <li>
                             <a href="javascript:;">
                                 <h4 class="control-sidebar-subheading">
-                                    Custom Template Design
+                                    Web POET Template Design
                                     <span class="pull-right-container">
-                                        <span class="label label-danger pull-right">70%</span>
+                                        <span class="label label-danger pull-right">25%</span>
                                     </span>
                                 </h4>
 
                                 <div class="progress progress-xxs">
-                                    <div class="progress-bar progress-bar-danger" style="width: 70%"></div>
+                                    <div class="progress-bar progress-bar-danger" style="width: 25%"></div>
                                 </div>
                             </a>
                         </li>
@@ -359,22 +366,17 @@ desired effect
 
                 </div>
                 <!-- /.tab-pane -->
-                <!-- Stats tab content -->
-                <div class="tab-pane" id="control-sidebar-stats-tab">Stats Tab Content</div>
-                <!-- /.tab-pane -->
                 <!-- Settings tab content -->
                 <div class="tab-pane" id="control-sidebar-settings-tab">
                     <form method="post">
                         <h3 class="control-sidebar-heading">General Settings</h3>
-
                         <div class="form-group">
                             <label class="control-sidebar-subheading">
-                                Report panel usage
+                                Insane Mode!
                                 <input type="checkbox" class="pull-right" checked>
                             </label>
-
                             <p>
-                                Some information about this general settings option
+                                Do something insane
                             </p>
                         </div>
                         <!-- /.form-group -->
