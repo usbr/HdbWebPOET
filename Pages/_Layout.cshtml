@@ -229,22 +229,25 @@ desired effect
                 <!-- Sidebar user panel (optional) -->
                 <div class="user-panel">
                     <div class="pull-left image">
-                        <img src="~/lib/AdminLTE/dist/img/user.svg" class="img-circle" alt="User Image">
+                        <a href="#HdbLogIn" data-toggle="modal" data-target="#modal-default">
+                            <img src="~/lib/AdminLTE/dist/img/user.svg" class="img-responsive" alt="User Image" width="42" height="42">
+                        </a>
                     </div>
                     <div class="pull-left info">
-                        <p>Guest</p>
+                        <p><span id="connected-hdb-user">Guest</span></p>
                         <!-- Status -->
-                        <a href="#"><i class="fa fa-circle text-blue"></i> Online</a>
+                        <a href="#HdbLogIn"><i class="fa fa-circle text-blue"></i> Online</a>
                     </div>
                 </div>
                 <div class="user-panel">
                     <div class="pull-left image">
-                        <img src="~/images/db.png" class="img-responsive" alt="DB Image" data-toggle="modal" data-target="#modal-default">
+                        <a href="#HdbLogIn" data-toggle="modal" data-target="#modal-default">
+                            <img src="~/images/db.png" class="img-responsive" alt="DB Image" width="42" height="42">
+                        </a>
                     </div>
                     <div class="pull-left info">
-                        <p>XXHDBX</p>
-
-                        <a href="#" data-toggle="modal" data-target="#modal-default"><i class="fa fa-circle text-warning"></i> Select an HDB</a>
+                        <p><span id="connected-hdb-name">XXHDBX</span></p>
+                        <a href="#HdbLogIn" data-toggle="modal" data-target="#modal-default"><i class="fa fa-circle text-warning"></i><span id="connected-hdb-status"> Offline</span></a>
                     </div>
                 </div>
 
@@ -415,26 +418,35 @@ desired effect
                     <p>
                         <b>Select your desired HDB...</b>
                         <br /><br />
-                        <select class="form-control">
+                        <select class="form-control" id="logInHDB">
                             <option>lchdb2</option>
                             <option>uchdb2</option>
                             <option>yaohdb</option>
                             <option>ecohdb</option>
                             <option>lbohdb</option>
                         </select>
+                        <input id="guest-login-checkbox" type="checkbox"> Log-In as Guest...
                         <br /><br />
-                        <b>You may also optionally log-in to your desired HDB to perform non app-user functions. 
-                        Note that you will be connected with read-only access only if you do not log-in...</b>
+                        <b>
+                            You may also optionally log-in to your desired HDB to perform non app-user functions.
+                            Note that you will be connected with read-only access only if you do not log-in...
+                        </b>
                         <br /><br />
                         User Name:
-                        <input type="text" class="form-control" placeholder="Enter your user name for the selected HDB...">
+                        <input id="logInUser" type="text" class="form-control" placeholder="Enter your user name for the selected HDB...">
                         Password:
-                        <input type="password" class="form-control" placeholder="Enter your passwor for the selected HDB...">
+                        <input id="logInPass" type="password" class="form-control" placeholder="Enter your passwor for the selected HDB...">
                     </p>
                 </div>
                 <div class="modal-footer">
                     @*<button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>*@
-                    <button type="button" class="btn btn-primary">Connect...</button>
+                    <button type="button" class="btn btn-primary"
+                            onclick="hdbConnect()">
+                        Connect...
+                    </button>
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                    <br /><br />
+                    <span id="login-text-helper" style="text-align:left;color:red">Log-In to HDB...</span>
                 </div>
             </div><!-- /.modal-content -->
         </div><!-- /.modal-dialog -->
